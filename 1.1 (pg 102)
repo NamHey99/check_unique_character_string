@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+	string s;
+	int i, dem[30];
+	bool u = 1;
+	fill(dem, dem + 30, 0);
+	cin >> s;
+	for (i = 0;i < s.size(); i++)
+	    dem[s[i]-'a']++;
+	for (i = 0; i <= 25; i++)
+	    if (dem[i] > 1)
+	        u = 0;
+	if (u)
+	    cout << "YES\n";
+	else 
+	    cout << "NO\n";
+}
